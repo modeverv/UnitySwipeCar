@@ -17,8 +17,6 @@ public class GameDirector : MonoBehaviour
 		this.car = GameObject.Find ("car");
 		this.flag = GameObject.Find ("flag");
 		this.distance = GameObject.Find ("Distance");
-		this.distance.GetComponent<Text> ().text =
-			@"スワイプしてスタート！\nフラッグまでできるだけ近く！";
 	}
 	
 	// Update is called once per frame
@@ -26,9 +24,9 @@ public class GameDirector : MonoBehaviour
 	{
 		float length = getLength ();
 		if (length >= 0f) {
-			setText ("ゴールまで" + length.ToString ("F2") + "m");
+			setText ("to Goal," + length.ToString ("F2") + "m");
 		} else {
-			setText ("ゲームオーバー");
+			setText ("GameOver");
 		}
 
 	}
